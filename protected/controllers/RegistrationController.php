@@ -32,10 +32,6 @@ class RegistrationController extends Controller
 
     public function actionIndex()
     {
-        if (!Yii::$app->user->isGuest) {
-            return $this->goHome();
-        }
-
         $model = new RegistrationForm();
         if ($model->load(Yii::$app->request->post()) && $model->registration()) {
             return $this->redirect(['success']);
