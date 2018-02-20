@@ -14,11 +14,23 @@ class ApiController extends Controller
         return [
             'access' => [
                 'class' => AccessControl::className(),
-                'only' => ['index'],
+                'only' => [
+                    'create',
+                    'delete',
+                    'change-status',
+                    'clear-completed',
+                    'change-name'
+                ],
                 'rules' => [
                     [
                         'allow' => true,
-                        'actions' => ['index'],
+                        'actions' => [
+                            'create',
+                            'delete',
+                            'change-status',
+                            'clear-completed',
+                            'change-name'
+                        ],
                         'roles' => ['@'],
                     ],
                 ],
