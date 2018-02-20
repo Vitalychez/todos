@@ -2,7 +2,7 @@
 
 /* @var $this yii\web\View */
 
-$this->title = 'What to do';
+$this->title = 'Список задач';
 ?>
 
 <div class="wrap">
